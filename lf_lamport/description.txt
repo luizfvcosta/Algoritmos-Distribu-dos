@@ -1,0 +1,27 @@
+
+Esse projeto tem como base o sample4 com algumas modificações , no intuito de 
+realizar o relogio de lamport.
+-----------------------------------------------------------------------------------
+
+O objetivo é atualizar os relogio internos dos nos com o envio de mensagens
+
+-----------------------------------------------------------------------------------
+
+Incialmente cada no possui uma variavel "lamportInternalClock" que é um inteiro 
+que possui o valor inicial igual a 0 e representa o relogio interno de cada no
+
+-----------------------------------------------------------------------------------
+
+A cada troca de mensagens que podem ser "Unicast" , "direct" ou "broadcast" o contador
+interno do no ""lamportInternalClock"" é incrementado em 1 unidade . 
+
+A mensagem enviada contem o "lamportInternalClock" já atualizado como data e a cor para identificação
+
+-----------------------------------------------------------------------------------
+
+O nó ao receber a mensagem atualiza seu contador "lamportInternalClock" se a data da mensagem for 
+superior ao seu valor interno.
+
+-----------------------------------------------------------------------------------
+
+Obs: Caso deseja-se fazer multiplos broadcasts é necessário limpar a cor do nó , com o botão de clear
