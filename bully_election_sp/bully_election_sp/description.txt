@@ -1,0 +1,17 @@
+This is a sample project to demonstrate the usage of SINALGO. It implements a small
+cellular network consisting of fixed antenna nodes and mobile nodes. 
+
+1  How to run this sample
+-----------------------------------------------------------------------------------
+
+ a) This project is easiest to launch from the command-line, where you can specify
+    that SINALGO creates an initial set of nodes with the following arguments:
+    
+    -project
+    -gen 49 BullyElectionTH:Antenna sample3:GridDistribution NoMobility
+    -gen 2000 BullyElectionTH:MobileNode Random RandomDirection
+ 
+    This will create a set of 49 antennas, distributed on a grid, and connected
+    according to the AntennaConnection distribution model. Also, it creates a set
+    of 2000 mobile nodes, which are randomly distributed and will move according to the
+    random way point mobility model.
